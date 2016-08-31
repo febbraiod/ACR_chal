@@ -1,28 +1,7 @@
-== README
+Thought process:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I will make this app in rails. This both my comfort zone and the quickest way I can think of to get something functional. It will also make it much easier for me to make this app live so that it can be run from anywhere.
 
-Things you may want to cover:
+I am sure there are lighter weight way to do this but as functionity is the priory along with ontime complete this is my stratedy.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I will have a page that asks for a file upload that hits a controller that will parse the file by sending it to a model that will use a couple of algo's to calculate the output which will then send the info to a show page with an option to download to a csv file.

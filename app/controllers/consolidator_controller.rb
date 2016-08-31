@@ -5,7 +5,6 @@ class ConsolidatorController < ApplicationController
   end
 
   def parser
-    binding.pry
     Parser.parse(params[:file])
     redirect_to output path
   end
