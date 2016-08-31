@@ -1,6 +1,14 @@
-Import Data:
+Import Data to display in HTML:
 
 <%= form_tag parser_path, multipart: true do %>
+  <%= file_field_tag :file %><br>
+  <%= submit_tag "Import CSV" %>
+<% end %>
+<br>
+
+Import Data to download csv:
+
+<%= form_tag parser_path + ".csv", multipart: true do %>
   <%= file_field_tag :file %><br>
   <%= submit_tag "Import CSV" %>
 <% end %>

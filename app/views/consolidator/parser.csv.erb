@@ -1,0 +1,3 @@
+<%- @output.each do |trade| -%>
+<%= CSV.generate_line([trade]) -%>
+<%- end -%>
