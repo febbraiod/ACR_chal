@@ -1125,3 +1125,597 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 Started POST "/parser" for ::1 at 2016-08-31 12:56:56 -0400
 Processing by ConsolidatorController#parser as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"2LhduUwx6hW7uwbdoXEKvUAJw0TcGJL7J90wzX/HtO6Nrk+LOzOnY2JDSCZH5174guvO7TOPvlj819TgkB2CLQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8e6d5cdb88 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-71287-16krh74.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+
+
+Started GET "/" for ::1 at 2016-08-31 13:36:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#file_upload as HTML
+  Rendered consolidator/file_upload.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 298ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:36:28 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f9873411f50 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72047-miaw70.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed   in 299643ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/parser" for ::1 at 2016-08-31 13:42:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/parser"):
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (132.2ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:42:57 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f990bd50358 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72273-134gr8n.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `output_arr' for Parser(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.1ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:43:10 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f990d143388 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72273-tynyqx.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `output_arr' for Parser(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (116.3ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:43:28 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f990ccafa38 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72273-193dj85.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+
+
+Started GET "/parser" for ::1 at 2016-08-31 13:45:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/parser"):
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.3ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:45:20 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f9bcceb3d08 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72323-llut7i.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:46:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fecc3c4bf00 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72352-1vtcffo.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/DonAndMimi/Development/code/ACR_chal/app/models/parser.rb:56: syntax error, unexpected keyword_do_block, expecting keyword_end
+      trades[k] do |i, v|
+                  ^
+/Users/DonAndMimi/Development/code/ACR_chal/app/models/parser.rb:56: syntax error, unexpected '|', expecting '='
+/Users/DonAndMimi/Development/code/ACR_chal/app/models/parser.rb:63: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/parser.rb:56: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/models/parser.rb:56: syntax error, unexpected '|', expecting '='
+  app/models/parser.rb:63: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.9ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:46:50 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fecc602a868 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72352-17yexi8.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+
+
+Started GET "/parser" for ::1 at 2016-08-31 13:57:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/parser"):
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (116.9ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:57:36 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a62f0c230 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72476-91cabp.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/parser.rb:57:in `block (2 levels) in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `block in output_arr'
+  app/models/parser.rb:55:in `each'
+  app/models/parser.rb:55:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.6ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 13:58:28 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a64019ca8 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72476-u4mon5.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed   in 118871ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:01:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fb52a44e418 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72621-p7vejf.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 112730ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/parser.rb:58:in `block (2 levels) in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `block in output_arr'
+  app/models/parser.rb:55:in `each'
+  app/models/parser.rb:55:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (132.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:03:23 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fb52a5ee4f8 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72621-o66kix.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+
+
+Started GET "/parser" for ::1 at 2016-08-31 14:04:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/parser"):
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.2) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.2) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/DonAndMimi/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:04:23 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007ff4254614c0 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72673-8al5v2.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed   in 38809ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:05:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idOXtTEt82F+J4uG/O2sNTMYtgQ54EyPDAT7HeTgxO/cxYWHRi++F6ffxX0ae/hw8fq7rdZ3YCzXDh8wCzryLA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f9ef2362570 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72792-1g0cevx.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed   in 138524ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-31 14:08:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#file_upload as HTML
+  Rendered consolidator/file_upload.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 315ms (Views: 304.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:08:56 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fcb6505f108 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-72939-zn3fpc.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed   in 312833ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:16:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a1bc84d10 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-18xifqi.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/DonAndMimi/Development/code/ACR_chal/app/models/parser.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+  end
+     ^):
+  app/models/parser.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.1ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:16:38 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a1aa8d170 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-1bnahcj.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/DonAndMimi/Development/code/ACR_chal/app/models/parser.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+  end
+     ^):
+  app/models/parser.rb:65: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.9ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:16:55 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a19c90e28 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-8khv8m.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "33638.00":String):
+  app/models/parser.rb:58:in `block (2 levels) in output_arr'
+  app/models/parser.rb:57:in `each'
+  app/models/parser.rb:57:in `block in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:17:59 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a1ab04810 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-1p6hylz.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "33638.00":String):
+  app/models/parser.rb:58:in `block (2 levels) in output_arr'
+  app/models/parser.rb:57:in `each'
+  app/models/parser.rb:57:in `block in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.0ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:18:37 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a195bb378 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-1rmawk4.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "33638.00":String):
+  app/models/parser.rb:58:in `block (2 levels) in output_arr'
+  app/models/parser.rb:57:in `each'
+  app/models/parser.rb:57:in `block in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.0ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (114.6ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:19:05 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a19672d98 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-pamhtu.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "33638.00":String):
+  app/models/parser.rb:59:in `block (2 levels) in output_arr'
+  app/models/parser.rb:57:in `each'
+  app/models/parser.rb:57:in `block in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.1ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:19:17 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a21cd7e10 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-17xpaxy.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}
+Completed 500 Internal Server Error in 85038ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `/' for "33638.00":String):
+  app/models/parser.rb:59:in `block (2 levels) in output_arr'
+  app/models/parser.rb:57:in `each'
+  app/models/parser.rb:57:in `block in output_arr'
+  app/models/parser.rb:56:in `each'
+  app/models/parser.rb:56:in `output_arr'
+  app/models/parser.rb:47:in `parse'
+  app/controllers/consolidator_controller.rb:8:in `parser'
+
+
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.7ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.8ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/DonAndMimi/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.7ms)
+
+
+Started POST "/parser" for ::1 at 2016-08-31 14:20:47 -0400
+Processing by ConsolidatorController#parser as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RkVJW2pp3VsPeaRAkboU9/HAnFjWhIVDkK+qSPTepDQTU1tpHWuQLdaB6rt3LECyMyKR8TkTqeBLpU5lGwSS9w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f8a202611d0 @tempfile=#<Tempfile:/var/folders/ln/tv_jgyjn7_j274j5v0510wgm0000gn/T/RackMultipart20160831-73165-1pkk1p8.dat>, @original_filename="trades_long.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"trades_long.dat\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import CSV"}

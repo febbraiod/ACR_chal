@@ -7,11 +7,12 @@ class Parser < ActiveRecord::Base
       trade = row.to_hash
       transaction_arr = trade["date|time|account|representation|description|direction|shares|price"].split('|')
 
+      trades_hash["date"] = transaction_arr[0]
       account = transaction_arr[2]
       stock = transaction_arr[3]
       buy_or_sell = transaction_arr[5]
       amount = transaction_arr[6].to_i
-      dollars = amount * transaction_arr[7].to_i
+      dollars = amount * transaction_arr[7].to_f
 
       if trades_hash.has_key?(account)
         if trades_hash[account].has_key?(stock)
@@ -43,21 +44,24 @@ class Parser < ActiveRecord::Base
           end
       end
     end
-    # r = output_hash(trades_hash)
-    binding.pry
+    r = self.output_arr(trades_hash)
   end
 
-  # def output_hash(trades)
-  #   result = {}
+  def self.output_arr(trades)
+    result = ["date|acct|ticker|direction|amount|px"]
+    date = trades["date"]
+    trades.delete("date")
 
-  #   trades.each do |k, v|
+    trades.each do |k, v|
+      trades[k].each do |stock, v|
+        vwap_buy = '%.4f' % (v['BUY']['continuing_dollars'].to_f/v['BUY']['total_amount']) unless v['BUY']['total_amount'] == 0
+        vwap_sell = '%.4f' % (v['SELL']['continuing_dollars'].to_f/v['SELL']['total_amount']) unless v['BUY']['total_amount'] == 0
+        result << "#{date}|#{k}|#{stock}|BUY|#{v['BUY']['total_amount']}|#{vwap_buy}" unless v['BUY']['total_amount'] == 0
+        result << "#{date}|#{k}|#{stock}|SELL|#{v['SELL']['total_amount']}|#{vwap_sell}" unless v['SELL']['total_amount'] == 0
+      end
+    end
+    result
+  end
 
-  #   end
-
-  # end
 
 end
-
-
-
-# {'a1' => {'stock1_name' => {buys => {total_amount => 12345, continuing_dollars => [last_amount * price, last_amount* price] } }}
