@@ -55,7 +55,7 @@ class Parser < ActiveRecord::Base
     trades.each do |k, v|
       trades[k].each do |stock, v|
         vwap_buy = '%.4f' % (v['BUY']['continuing_dollars'].to_f/v['BUY']['total_amount']) unless v['BUY']['total_amount'] == 0
-        vwap_sell = '%.4f' % (v['SELL']['continuing_dollars'].to_f/v['SELL']['total_amount']) unless v['BUY']['total_amount'] == 0
+        vwap_sell = '%.4f' % (v['SELL']['continuing_dollars'].to_f/v['SELL']['total_amount']) unless v['SELL']['total_amount'] == 0
         result << "#{date}|#{k}|#{stock}|BUY|#{v['BUY']['total_amount']}|#{vwap_buy}" unless v['BUY']['total_amount'] == 0
         result << "#{date}|#{k}|#{stock}|SELL|#{v['SELL']['total_amount']}|#{vwap_sell}" unless v['SELL']['total_amount'] == 0
       end
