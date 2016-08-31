@@ -2,7 +2,6 @@ class Parser < ActiveRecord::Base
 
   def self.parse(file)
     trades_hash = {}
-    rows = []
 
     CSV.foreach(file.tempfile, headers: true, :header_converters => lambda { |h| h.try(:downcase).tr(" ", "_") }) do |row|
       trade = row.to_hash
@@ -13,9 +12,10 @@ class Parser < ActiveRecord::Base
       buy_or_sell = transaction_arr[5]
       amount = transaction_arr[6].to_i
       dollars = amount * transaction_arr[7].to_i
+
       if trades_hash.has_key?(account)
         if trades_hash[account].has_key?(stock)
-          if buy_or_sell = 'BUY'
+          if buy_or_sell == 'BUY'
             trades_hash[account][stock]["BUY"]['total_amount'] += amount
             trades_hash[account][stock]["BUY"]['continuing_dollars'] += dollars
           else
@@ -24,7 +24,7 @@ class Parser < ActiveRecord::Base
           end
         else
           trades_hash[account][stock] = {"BUY" => {'total_amount' => 0, 'continuing_dollars' => 0}, "SELL" => {'total_amount' => 0, 'continuing_dollars' => 0}}
-          if buy_or_sell = 'BUY'
+          if buy_or_sell == 'BUY'
             trades_hash[account][stock]["BUY"]['total_amount'] += amount
             trades_hash[account][stock]["BUY"]['continuing_dollars'] += dollars
           else
@@ -34,7 +34,7 @@ class Parser < ActiveRecord::Base
         end
       else 
           trades_hash[account] = {stock => {"BUY" => {'total_amount' => 0, 'continuing_dollars' => 0}, "SELL" => {'total_amount' => 0, 'continuing_dollars' => 0}}}
-          if buy_or_sell = 'BUY'
+          if buy_or_sell == 'BUY'
             trades_hash[account][stock]["BUY"]['total_amount'] += amount
             trades_hash[account][stock]["BUY"]['continuing_dollars'] += dollars
           else
