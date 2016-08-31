@@ -44,7 +44,7 @@ class Parser < ActiveRecord::Base
           end
       end
     end
-    r = self.output_arr(trades_hash)
+    self.output_arr(trades_hash)
   end
 
   def self.output_arr(trades)

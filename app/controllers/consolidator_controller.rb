@@ -5,11 +5,7 @@ class ConsolidatorController < ApplicationController
   end
 
   def parser
-    Parser.parse(params[:file])
-    redirect_to output path
-  end
-
-  def output_page
+    @output = Parser.parse(params[:file])
   end
 
 end
